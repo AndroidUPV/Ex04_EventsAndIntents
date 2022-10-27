@@ -1,0 +1,30 @@
+<!--
+  ~ Copyright (c) 2022
+  ~ David de Andrés and Juan Carlos Ruiz
+  ~ Development of apps for mobile devices
+  ~ Universitat Politècnica de València
+  -->
+
+<resources>
+    <string name="app_name">Ex04_EventsAndIntents</string>
+    <!--Text to show in MainActivity's buttons-->
+    <string name="button_notification">Notify user</string>
+    <string name="button_explicit_intent">Launch new activity\n(Explicit Intent)</string>
+    <string name="button_explicit_intent_with_parameter">Launch new activity with parameter</string>
+    <string name="button_explicit_intent_for_result">Launch new activity and\nexpect a result</string>
+    <string name="button_implicit_intent_system_chooses">Navigate to ETSINF\'s location\n(Implicit Intent)</string>
+    <string name="button_implicit_intent_user_chooses">User chooses the application to\nnavigate to ETSINF\'s location</string>
+    <!--Message to display in the notification-->
+    <string name="notification_message">Button clicked!</string>
+    <string name="no_message">No message returned!</string>
+    <!--Text to display in the ExplicitIntentActivity-->
+    <string name="explicit_intent_message">This is the ExplicitIntentActivity</string>
+    <!--Text to display in the ForResultActivity-->
+    <string name="for_result_message">This activity will return a message</string>
+    <!--Text to display when no activity is found to handle an Intent-->
+    <string name="error_message">No activity can handle the specified Intent</string>
+    <!--Text to display when displaying a chooser for several applications-->
+    <string name="chooser_message">Please, select the application to handle your Intent</string>
+    <!--Text to display in the ImplicitIntentActivity-->
+    <string name="implicit_intent_message">This is the ImplicitIntentActivity</string>
+</resources>
