@@ -30,7 +30,7 @@ class ForResultActivity : AppCompatActivity() {
             override fun handleOnBackPressed() {
                 // Create a new Intent and include the result to return
                 // Set this Intent as the result to be returned by the activity
-                setResult(RESULT_OK, Intent().putExtra(STRING_RESULT, "Incoming result!"));
+                setResult(RESULT_OK, Intent().putExtra(STRING_RESULT, "Incoming result!"))
                 // Destroy the activity
                 finish()
             }

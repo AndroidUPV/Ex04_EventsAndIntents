@@ -18,8 +18,8 @@ import androidx.appcompat.app.AppCompatActivity
 import upv.dadm.ex04_eventsandintents.databinding.ActivityMainBinding
 
 // Constants for exchanging information between activities
-const val STRING_MESSAGE = "message"
-const val STRING_RESULT = "result"
+const val STRING_MESSAGE = "upv.dadm.ex04_eventsandintents.MESSAGE"
+const val STRING_RESULT = "upv.dadm.ex04_eventsandintents.RESULT"
 
 /**
  * Displays several Buttons that let the user launch some explicit and implicit Intents.
@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
     private fun displayNotification() {
         Toast.makeText(
             this@MainActivity, R.string.notification_message, Toast.LENGTH_SHORT
-        ).show();
+        ).show()
     }
 
     // Launch an activity, selected by the user, to navigate to ETSINF's location
@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity() {
             .setData(Uri.parse("geo:39.4819305,-0.3469791?z=18")) // geo:latitude,longitude?z=zoom
 
         // Create a chooser for the user to select the application to handle the Intent
-        val chooser = Intent.createChooser(intent, getString(R.string.chooser_message));
+        val chooser = Intent.createChooser(intent, getString(R.string.chooser_message))
 
         // Check that there is an activity that can handle this intent
         if (chooser.resolveActivity(packageManager) != null) {
@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
         else {
             Toast.makeText(
                 this@MainActivity, R.string.error_message, Toast.LENGTH_SHORT
-            ).show();
+            ).show()
         }
     }
 
@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity() {
         else {
             Toast.makeText(
                 this@MainActivity, R.string.error_message, Toast.LENGTH_SHORT
-            ).show();
+            ).show()
         }
     }
 

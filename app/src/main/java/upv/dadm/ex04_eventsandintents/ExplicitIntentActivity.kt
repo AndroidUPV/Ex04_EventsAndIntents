@@ -7,8 +7,8 @@
 
 package upv.dadm.ex04_eventsandintents
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import upv.dadm.ex04_eventsandintents.databinding.ActivitySecondaryBinding
 
 /**
@@ -24,7 +24,7 @@ class ExplicitIntentActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Get the value (String) of the parameter "message" passed within the Intent
-        val message : String? = intent.getStringExtra(STRING_MESSAGE)
+        val message: String? = intent.getStringExtra(STRING_MESSAGE)
         // Display this or the default message on the TextView
         binding.tvMessage.text = message ?: getString(R.string.explicit_intent_message)
     }
