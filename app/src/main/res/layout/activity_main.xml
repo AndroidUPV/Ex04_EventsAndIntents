@@ -7,76 +7,84 @@
 <!--
   ~ Displays buttons to launch implicit and explicit Intents
   -->
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/bShowNotification"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="@string/button_notification"
-        app:layout_constraintBottom_toTopOf="@+id/bImplicitIntentSystemChooses"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/bImplicitIntentSystemChooses"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="@string/button_implicit_intent_system_chooses"
-        app:layout_constraintBottom_toTopOf="@+id/bExplicitIntent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bShowNotification" />
+        <Button
+            android:id="@+id/bShowNotification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/button_notification"
+            app:layout_constraintBottom_toTopOf="@+id/bImplicitIntentSystemChooses"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/bExplicitIntent"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="@string/button_explicit_intent"
-        app:layout_constraintBottom_toTopOf="@+id/bExplicitIntentWithParameter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bImplicitIntentSystemChooses" />
+        <Button
+            android:id="@+id/bImplicitIntentSystemChooses"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/button_implicit_intent_system_chooses"
+            app:layout_constraintBottom_toTopOf="@+id/bExplicitIntent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bShowNotification" />
 
-    <Button
-        android:id="@+id/bExplicitIntentWithParameter"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="@string/button_explicit_intent_with_parameter"
-        app:layout_constraintBottom_toTopOf="@+id/bExplicitIntentForResult"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bExplicitIntent" />
+        <Button
+            android:id="@+id/bExplicitIntent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/button_explicit_intent"
+            app:layout_constraintBottom_toTopOf="@+id/bExplicitIntentWithParameter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bImplicitIntentSystemChooses" />
 
-    <Button
-        android:id="@+id/bExplicitIntentForResult"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="@string/button_explicit_intent_for_result"
-        app:layout_constraintBottom_toTopOf="@+id/bImplicitIntentUserChooses"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bExplicitIntentWithParameter" />
+        <Button
+            android:id="@+id/bExplicitIntentWithParameter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/button_explicit_intent_with_parameter"
+            app:layout_constraintBottom_toTopOf="@+id/bExplicitIntentForResult"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bExplicitIntent" />
 
-    <Button
-        android:id="@+id/bImplicitIntentUserChooses"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="@string/button_implicit_intent_user_chooses"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bExplicitIntentForResult" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/bExplicitIntentForResult"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/button_explicit_intent_for_result"
+            app:layout_constraintBottom_toTopOf="@+id/bImplicitIntentUserChooses"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bExplicitIntentWithParameter" />
+
+        <Button
+            android:id="@+id/bImplicitIntentUserChooses"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/button_implicit_intent_user_chooses"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bExplicitIntentForResult" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
