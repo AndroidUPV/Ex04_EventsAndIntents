@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ Copyright (c) 2022-2024 Universitat Politècnica de València
   ~ Authors: David de Andrés and Juan Carlos Ruiz
@@ -10,9 +11,5 @@
   -->
 
 <resources>
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Ex04_EventsAndIntents" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
-    </style>
+    <dimen name="side_margins">16dp</dimen>
 </resources>

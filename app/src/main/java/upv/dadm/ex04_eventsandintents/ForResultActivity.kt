@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022-2023 Universitat Politècnica de València
+ * Copyright (c) 2022-2024 Universitat Politècnica de València
  * Authors: David de Andrés and Juan Carlos Ruiz
  *          Fault-Tolerant Systems
  *          Instituto ITACA
@@ -14,7 +14,10 @@ package upv.dadm.ex04_eventsandintents
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import upv.dadm.ex04_eventsandintents.databinding.ActivitySecondaryBinding
 
 /**
@@ -26,8 +29,18 @@ class ForResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         // Get the automatically generated view binding for the layout resource
         val binding = ActivitySecondaryBinding.inflate(layoutInflater)
+        // Enable edge-to-edge display
+        enableEdgeToEdge()
         // Set the activity content to the root element of the generated view
         setContentView(binding.root)
+        // Get side margins in pixels
+        val sideMarginPx = resources.getDimensionPixelSize(R.dimen.side_margins)
+        // Prevent the layout from overlapping with system bars in edge-to-edge display
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(sideMarginPx, systemBars.top, sideMarginPx, systemBars.bottom)
+            insets
+        }
 
         // Add a callback to be executed when the user presses the Back button
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
